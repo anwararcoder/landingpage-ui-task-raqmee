@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* :: Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    color: #181E4B;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+::-moz-selection {
+    background-color: #F1A501;
+    color: #FFF;
+    text-shadow: none;
+}
+::selection {
+    background-color: #F1A501;
+    color: #FFF;
+    text-shadow: none;
+}
+a,
+a:hover,
+a:focus,
+button:focus {
+    text-decoration: none;
+    color: #5E6282;
+}
+.container,
+.container-fluid{
+    position: relative
+}
+
+/* :: Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Volkhov', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+p {
+    color: #5E6282;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    line-height: 25px;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.animate-float{
+    animation: float 6s ease-in-out infinite;
+}
+.testimonialsSwiper{
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+.testimonialsSwiper .swiper-slide{
+    background-color: #FFF !important;
+}
+.testimonialsSwiper .swiper-slide-visible .box-content{
+    background-color:  #FFF !important;
+    box-shadow:
+    0px 0px 1.85px rgba(0, 0, 0, 0.0048),
+    0px 0px 8.15px rgba(0, 0, 0, 0.0079),
+    0px 0px 13px rgba(0, 0, 0, 0.01),
+    0px 0px 25.48px rgba(0, 0, 0, 0.0121),
+    0px 0px 46.85px rgba(0, 0, 0, 0.0152);
+}
+.testimonialsSwiper .swiper-slide:not(.swiper-slide-visible){
+    transform: translate3d(50px, 50px, 50px) !important;
+    opacity: 1 !important;
+}
+.testimonialsSwiper .swiper-slide:not(.swiper-slide-visible) .box-content{
+    background-color:  transparent !important;
+    box-shadow: none;
+    border: 2px solid #F7F7F7;
+}
+.testimonialsSwiper-button-prev.swiper-button-disabled,
+.testimonialsSwiper-button-next.swiper-button-disabled{
+    opacity: 0.3;
+}
+.testimonialsSwiper-pagination{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    line-height: 1;
+}
+.testimonialsSwiper-pagination .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    margin: 0 !important;
+    background: #39425D;
+}
+
+/* :: Navbar */
+.nav-bar.active{
+    background-color: #FFF;
+    box-shadow: 0 5px 40px rgb(9 29 62 / 11%);
+}
+.nav-bar .nav-bar-links .level-1 .item-level-1 .link-level-1.active{
+    color: #F1A501;
+}
+.nav-bar .nav-bar-links .level-1 .item-level-1:last-of-type .link-level-1{
+    margin-right: 0;
+}
+.nav-bar .nav-bar-links .level-2 .item-level-2 .link-level-2.active{
+    color: #F1A501;
+    background-color: #F9F9F9;
+}
+.nav-bar .nav-bar-links .level-2 .item-level-2:last-of-type .link-level-2{
+    border: none;
+}
+/* :: Large devices */
+@media (max-width: 1024px){
+    .nav-bar .nav-bar-links .level-1{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .nav-bar .content .nav-bar-links.active{
+        left: 0;
+    }
+    .nav-bar .content .nav-bar-links.active .content-responsive{
+        box-shadow: 0px 3px 7px 0px rgb(9 29 62 / 10%);
+    }
+    .nav-bar .nav-bar-links .level-2.active {
+        display: block;
+    }
+    .nav-bar .content .nav-bar-links.active .close-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #181E4B;
+        opacity: 0.1;
+        z-index: -1;
+        cursor: pointer;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+}
